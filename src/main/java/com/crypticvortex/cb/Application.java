@@ -60,5 +60,5 @@ public class Application extends JFrame {
         }
     }
 
-    private static final long serialVerisonUID = -1L;
+    private static final long serialVersionUID = -1L;
 }
