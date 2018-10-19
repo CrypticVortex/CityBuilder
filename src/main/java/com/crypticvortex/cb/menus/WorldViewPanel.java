@@ -1,6 +1,6 @@
 package com.crypticvortex.cb.menus;
 
-import com.crypticvortex.cb.mechanics.World;
+import com.crypticvortex.cb.core.World;
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;

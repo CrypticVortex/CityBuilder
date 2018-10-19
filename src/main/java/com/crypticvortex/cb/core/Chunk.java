@@ -1,4 +1,4 @@
-package com.crypticvortex.cb.mechanics;
+package com.crypticvortex.cb.core;
 
 /**
  * Each sliver of the game world.

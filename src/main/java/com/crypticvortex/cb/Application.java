@@ -1,6 +1,6 @@
 package com.crypticvortex.cb;
 
-import com.crypticvortex.cb.mechanics.World;
+import com.crypticvortex.cb.core.World;
 import com.crypticvortex.cb.menus.ActionPanel;
 import com.crypticvortex.cb.menus.OverviewPanel;
 import com.crypticvortex.cb.menus.WorldViewPanel;
