@@ -12,7 +12,7 @@
     The leftover statistics not displayed here can be seen via the ACTIONS panel button labeled "Nation Overview."
 
     ACTIONS: This panel will contain a variety of different actions you can do and the list will grow or shrink as time progresses.
-    Some of the more notable buttons will be: "Nation Overview," "Warehouse," and "Construction"
+    Some of the more notable buttons will be: "Nation Overview," "Storehouse," and "Construction"
 
 
     ---- Secondary Interfaces ----
@@ -33,14 +33,14 @@
     Hovering over a tile will also give a brief overview as to the statistics such as how many workers and how much you gather and consume per day.
 
 
-    --- [Internal] Threads ---
+    ---- [Internal] Threads ----
 
     One main game thread will always exist and be accessible from the various portions of the game. This thread will handle a lot of logic,
     and if it gets overloaded we might need to have more than one core thread. Some things it will handle are TIME and CONSTRUCTION of new buildings.
     This thread also needs to be able to pause, or at least portions of it need to be able to pause so you can take in the information. It will start paused.
 
 
-    --- Time ----
+    ---- Time ----
 
     Starting at some point in early AD such as 1000 on January 1st, every second a day increases, once the current day goes past the max in the month it will reset to the 1st and go up.
     Once surpassing December 31st the year will increment. Time can be paused.
