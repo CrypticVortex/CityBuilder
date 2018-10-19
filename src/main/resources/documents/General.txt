@@ -22,6 +22,10 @@
     If you own the chunk you will see a list of structures built there, its remaining capacity, and possibly a button like Sell Chunk (which will only work if the chunk is empty.
     If you do not own the chunk you will see a very simple dialog containing four elements: Capacity, Price, a Close button, and a Purchase button.
 
+    CONSTRUCTION: This panel will be filterable and showcase all you can create in the nation or on the selected chunk.
+    On the left side will be the categories with a number on how many structures of that type there are available. Below that will be the Construct button.
+    On the right will be a display of all the structures that fit the specified criteria.
+
 
     --- [Internal] Threads ---
 
