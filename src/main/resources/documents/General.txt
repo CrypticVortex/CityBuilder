@@ -26,6 +26,12 @@
     On the left side will be the categories with a number on how many structures of that type there are available. Below that will be the Construct button.
     On the right will be a display of all the structures that fit the specified criteria.
 
+    MILITARY OVERVIEW: Only visible once you make your first military structure or unlock the required tech.
+    This panel will showcase the exact count of each type of soldier and overall military strength and nation defense.
+
+    STOREHOUSE: The Storehouse view will show all resources in your nation, with all possible resources being listed just with a red 0 on the ones you don't have.
+    Hovering over a tile will also give a brief overview as to the statistics such as how many workers and how much you gather and consume per day.
+
 
     --- [Internal] Threads ---
 
