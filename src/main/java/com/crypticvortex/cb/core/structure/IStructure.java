@@ -1,6 +1,6 @@
 package com.crypticvortex.cb.core.structure;
 
-public interface IStructure {
+interface IStructure {
     int getCost();
     int getBuildTime();
     int getSize();

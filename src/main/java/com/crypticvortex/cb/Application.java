@@ -1,5 +1,6 @@
 package com.crypticvortex.cb;
 
+import com.crypticvortex.cb.core.CoreThread;
 import com.crypticvortex.cb.core.World;
 import com.crypticvortex.cb.menus.ActionPanel;
 import com.crypticvortex.cb.menus.OverviewPanel;
@@ -22,6 +23,7 @@ public class Application extends JFrame {
     private Border empty = BorderFactory.createEmptyBorder();
 
     public Application() {
+        new CoreThread();
         setTitle("Code-name 'CityBuilder'");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);

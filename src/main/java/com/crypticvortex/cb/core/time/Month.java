@@ -56,4 +56,22 @@ public enum Month {
         }
     }
 
+    public static int getMonthNumber(Month month){
+        switch(month){
+            case JANUARY:return 1;
+            case FEBRUARY:
+            case LEAP_FEBRUARY: return 2;
+            case MARCH: return 3;
+            case APRIL: return 4;
+            case MAY: return 5;
+            case JUNE: return 6;
+            case JULY: return 7;
+            case AUGUST: return 8;
+            case SEPTEMBER: return 9;
+            case OCTOBER: return 10;
+            case NOVEMBER: return 11;
+            default: return 12;
+        }
+    }
+
 }

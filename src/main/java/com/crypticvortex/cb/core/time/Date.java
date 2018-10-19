@@ -21,7 +21,7 @@ public class Date {
         return false;
     }
 
-    public void addDays(){
+    public void addDay(){
         if(Month.getDays(month) == ++day) {
             day = 1;
             addMonth();
@@ -40,4 +40,23 @@ public class Date {
         isLeapYear = isLeapYear(year);
         month = Month.JANUARY;
     }
+
+    @Override
+    public String toString(){
+        String date = "" + this.year;
+        while(date.length() < 4)
+            date = 0 + date;
+
+        date += (Month.getMonthNumber(month) < 10)?
+                ("/" + 0 ) + Month.getMonthNumber(month):
+                "/" + Month.getMonthNumber(month);
+
+        date += (day < 10)? ("/" + 0) + day: "/" + day;
+
+        return date;
+    }
+
+    public int getYear() { return year; }
+    public Month getMonth() { return month; }
+    public int getDay() { return day; }
 }
