@@ -70,6 +70,7 @@
     Crime is something that can happen when your citizens approval of you drops too low. During this time structures have a chance to be pillaged and burned to the ground.
     If a structure is pillaged and NOT burned to the ground, production will cease or slow for a varying amount of days.
 
+
     ---- Development Resources ----
 
     Hex Grid algorithm
