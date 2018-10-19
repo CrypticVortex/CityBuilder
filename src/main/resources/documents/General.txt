@@ -1,0 +1,81 @@
+
+
+    ---- Main Interface  ----
+
+    There will be 3 separate panels to the main game interface: World View, Nation Overview, and Actions.
+
+    WORLD VIEW: Solely contains a grid of buttons representing the world with coordinates that are colored based on what the chunk is and the status of the chunk.
+    When clicking on the chunk, a small dialog will be created either confirming if you want to purchase the tile for the set price, or showing you what is on the tile with some art.
+    Each tile will have a set amount of capacity for structures and it will be used up depending on the structures located inside.
+
+    TOWN OVERVIEW: Located along the top of the WORLD VIEW this will showcase how much money you produce per day, citizens, overall happiness, and other key stats.
+    The leftover statistics not displayed here can be seen via the ACTIONS panel button labeled "Nation Overview."
+
+    ACTIONS: This panel will contain a variety of different actions you can do and the list will grow or shrink as time progresses.
+    Some of the more notable buttons will be: "Nation Overview," "Warehouse," and "Construction"
+
+
+    ---- Secondary Interfaces ----
+
+    CHUNK OVERVIEW: Displayed when you click on any chunk in the world this will change its contents based on the status of the chunk.
+    The background of the panel will be a pixel art image of the landscape no matter what the status is.
+    If you own the chunk you will see a list of structures built there, its remaining capacity, and possibly a button like Sell Chunk (which will only work if the chunk is empty.
+    If you do not own the chunk you will see a very simple dialog containing four elements: Capacity, Price, a Close button, and a Purchase button.
+
+
+    --- [Internal] Threads ---
+
+    One main game thread will always exist and be accessible from the various portions of the game. This thread will handle a lot of logic,
+    and if it gets overloaded we might need to have more than one core thread. Some things it will handle are TIME and CONSTRUCTION of new buildings.
+    This thread also needs to be able to pause, or at least portions of it need to be able to pause so you can take in the information. It will start paused.
+
+
+    --- Time ----
+
+    Starting at some point in early AD such as 1000 on January 1st, every second a day increases, once the current day goes past the max in the month it will reset to the 1st and go up.
+    Once surpassing December 31st the year will increment. Time can be paused.
+
+    Something to potentially add in the future is a calendar window where you can see important milestones. This window might not be very useful if the game isn't paused.
+
+
+    ---- Research ----
+
+    A very important and core part of the game will be researching new technologies. This tech tree will likely be stored in XML and have very little in the actual code.
+    The full scope of how this feature will work is undetermined but it will need to be displayed either horizontally like a Civilization V tech tree, or vertically in a similar fashion.
+
+
+    ---- Laws, Policies, Taxes, Happiness, and Respect ----
+
+    LAWS: At milestones of your cities growth you will be given the option to pass laws. Laws will be randomly/procedurally generated based on a variety of factors,
+    which change depending on what you have in your nation. You will be able to select one of three laws to pass each cycle and each one is tied to one specific alignment.
+    Depending on what alignment you pick, your citizens RESPECT for you will change depending on what they themselves are aligned with. Can cause CRIME.
+
+    POLICIES: Policies can be enacted upon the first of every month and will allow you to declare what law you are hoping to pass.
+    This will cause premature RESPECT changes allowing you to adjust your economy accordingly. You can skip this when the time comes, and always change your mind after. Can cause CRIME.
+
+    RESPECT: Depending on what POLICY or LAW you decree/pass citizens will gain or lose respect for you with the chance they don't change at all.
+    Respect is per-household and your overall HAPPINESS will adjust based on combined respect. Can cause CRIME.
+
+    HAPPINESS: Happiness is a measurement of how much your citizens like you. This can be affected by a wide variety of things and should be kept in the positive.
+    Citizens will have needs that need to be maintained such as being fed and having clean water. Happiness can also be lowered dramatically when being attacked by an enemy nation.
+    During a SIEGE happiness will rapidly decrease, and if it gets too low some citizens may revolt against you in favor of the enemy nation.
+
+
+    ---- Crime ----
+
+    Crime is something that can happen when your citizens approval of you drops too low. During this time structures have a chance to be pillaged and burned to the ground.
+    If a structure is pillaged and NOT burned to the ground, production will cease or slow for a varying amount of days.
+
+    ---- Development Resources ----
+
+    Hex Grid algorithm
+    -> https://stackoverflow.com/questions/20734438/algorithm-to-generate-a-hexagonal-grid-with-coordinate-system
+
+    Implementing a tech tree
+    -> https://gamedev.stackexchange.com/questions/25649/implementing-a-tech-tree
+
+    Fantasy Hex Tiles
+    -> https://cuddlycolin.itch.io/fantasy-hex-tiles
+
+    Stardew Valley Sprites
+    -> https://community.playstarbound.com/threads/restyled-sprites-by-atroxambitus.136710/

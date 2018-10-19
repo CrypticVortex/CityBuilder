@@ -16,7 +16,7 @@ public class OverviewPanel extends JPanel {
         setLayout(new MigLayout());
 
         JLabel moneyIco = new JLabel(MenuIcons.MONEY.getIcon());
-        JLabel money = new JLabel("1000.00 (+0/s)");
+        JLabel money = new JLabel("1000.00 (+0/d)");
 
         add(moneyIco,"cell 0 0");
         add(money, "cell 1 0");

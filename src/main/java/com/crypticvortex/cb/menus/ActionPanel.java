@@ -16,7 +16,7 @@ public class ActionPanel extends JPanel {
     public ActionPanel(World world) {
         setLayout(new MigLayout(new LC().insets("5", "5", "15", "5")));
 
-        JButton overview = new JButton("Town Overview");
+        JButton overview = new JButton("Nation Overview");
         add(overview, "cell 0 0, w 150!");
     }
 }
