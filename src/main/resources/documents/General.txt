@@ -8,7 +8,7 @@
     When clicking on the chunk, a small dialog will be created either confirming if you want to purchase the tile for the set price, or showing you what is on the tile with some art.
     Each tile will have a set amount of capacity for structures and it will be used up depending on the structures located inside.
 
-    TOWN OVERVIEW: Located along the top of the WORLD VIEW this will showcase how much money you produce per day, citizens, overall happiness, and other key stats.
+    NATION OVERVIEW: Located along the top of the WORLD VIEW this will showcase how much money you produce per day, citizens, overall happiness, and other key stats.
     The leftover statistics not displayed here can be seen via the ACTIONS panel button labeled "Nation Overview."
 
     ACTIONS: This panel will contain a variety of different actions you can do and the list will grow or shrink as time progresses.
