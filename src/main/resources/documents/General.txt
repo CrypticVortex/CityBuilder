@@ -75,6 +75,12 @@
     Hex Grid algorithm
     -> https://stackoverflow.com/questions/20734438/algorithm-to-generate-a-hexagonal-grid-with-coordinate-system
 
+    Creating a spiral 2d grid
+    -> https://stackoverflow.com/questions/3706219/algorithm-for-iterating-over-an-outward-spiral-on-a-discrete-2d-grid-from-the-or/3706260#3706260
+
+    Getting started with procedural generation
+    -> https://stackoverflow.com/questions/155069/how-does-one-get-started-with-procedural-generation
+
     Implementing a tech tree
     -> https://gamedev.stackexchange.com/questions/25649/implementing-a-tech-tree
 
