@@ -43,38 +43,17 @@ public class CoreThread{
     private void UpdateResources() {
         GlobalVars.GetAllResourcesTick().forEach((key,value) -> {
             switch (key) {
-                case "MONEY":
-                    GlobalVars.MONEY += value;
-                    break;
-                case "TIMBER":
-                    GlobalVars.TIMBER += value;
-                    break;
-                case "COTTON":
-                    GlobalVars.COTTON += value;
-                    break;
-                case "GRAIN":
-                    GlobalVars.GRAIN += value;
-                    break;
-                case "STONE":
-                    GlobalVars.STONE += value;
-                    break;
-                case "WATER":
-                    GlobalVars.WATER += value;
-                    break;
-                case "HEMP":
-                    GlobalVars.HEMP += value;
-                    break;
-                case "ROPE":
-                    GlobalVars.ROPE += value;
-                    break;
-                case "GOLD":
-                    GlobalVars.GOLD += value;
-                    break;
-                case "BARDS":
-                    GlobalVars.BARDS += value;
-                    break;
-                default:
-                    break;
+                case "MONEY": GlobalVars.MONEY += value; break;
+                case "TIMBER": GlobalVars.TIMBER += value; break;
+                case "COTTON": GlobalVars.COTTON += value; break;
+                case "GRAIN":  GlobalVars.GRAIN += value; break;
+                case "STONE": GlobalVars.STONE += value; break;
+                case "WATER":  GlobalVars.WATER += value; break;
+                case "HEMP": GlobalVars.HEMP += value; break;
+                case "ROPE": GlobalVars.ROPE += value; break;
+                case "GOLD": GlobalVars.GOLD += value;  break;
+                case "BARDS":  GlobalVars.BARDS += value; break;
+                default: break;
             }
         });
     }
