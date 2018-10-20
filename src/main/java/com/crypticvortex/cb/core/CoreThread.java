@@ -6,19 +6,12 @@ import com.sun.jmx.snmp.tasks.Task;
 
 public class CoreThread{
 
-    private final static int UPDATE_RATE = 1000;
-    private final static int PAUSED_UPDATE_RATE = 100;
-
     private Date date;
-    private int cash;
-    private int cashIncome;
     private Thread coreThread;
     private boolean isCoreThreadPaused;
 
     public CoreThread(){
         this.date = new Date(0, Month.JANUARY, 0);
-        cash = 0;
-        cashIncome = 0;
         coreThread = createCoreThread();
         isCoreThreadPaused = true;
         coreThread.start();
@@ -30,16 +23,58 @@ public class CoreThread{
             for(;;){
                 try {
                     while(isCoreThreadPaused){
-                        Thread.sleep(PAUSED_UPDATE_RATE);
+                        Thread.sleep(GlobalVars.PAUSED_UPDATE_RATE);
                     }
                     System.out.println(date);
-                    Thread.sleep(UPDATE_RATE);
+                    Thread.sleep(GlobalVars.UPDATE_RATE);
 
                     date.addDay();
-                    cash += cashIncome;
+
+                    // Calls the update resources function
+                    UpdateResources();
 
 
                 } catch(Exception ex){ System.out.println("Well fuck : \n" + ex); }
+            }
+        });
+    }
+
+    // Will add the resource per tick value to the resource themselves
+    private void UpdateResources() {
+        GlobalVars.GetAllResourcesTick().forEach((key,value) -> {
+            switch (key) {
+                case "MONEY":
+                    GlobalVars.MONEY += value;
+                    break;
+                case "TIMBER":
+                    GlobalVars.TIMBER += value;
+                    break;
+                case "COTTON":
+                    GlobalVars.COTTON += value;
+                    break;
+                case "GRAIN":
+                    GlobalVars.GRAIN += value;
+                    break;
+                case "STONE":
+                    GlobalVars.STONE += value;
+                    break;
+                case "WATER":
+                    GlobalVars.WATER += value;
+                    break;
+                case "HEMP":
+                    GlobalVars.HEMP += value;
+                    break;
+                case "ROPE":
+                    GlobalVars.ROPE += value;
+                    break;
+                case "GOLD":
+                    GlobalVars.GOLD += value;
+                    break;
+                case "BARDS":
+                    GlobalVars.BARDS += value;
+                    break;
+                default:
+                    break;
             }
         });
     }
