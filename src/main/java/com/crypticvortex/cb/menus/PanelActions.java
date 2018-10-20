@@ -1,5 +1,6 @@
 package com.crypticvortex.cb.menus;
 
+import com.crypticvortex.cb.core.Nation;
 import com.crypticvortex.cb.core.World;
 import net.miginfocom.layout.LC;
 import net.miginfocom.swing.MigLayout;
@@ -11,9 +12,9 @@ import javax.swing.*;
  *
  * @author Jatboy
  */
-public class ActionPanel extends JPanel {
+public class PanelActions extends JPanel {
 
-    public ActionPanel(World world) {
+    public PanelActions(Nation nation, World world) {
         setLayout(new MigLayout(new LC().insets("5", "5", "15", "5")));
 
         JButton overview = new JButton("Nation Overview");

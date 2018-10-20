@@ -1,5 +1,8 @@
 package com.crypticvortex.cb.menus;
 
+import com.crypticvortex.cb.core.GlobalVars;
+import com.crypticvortex.cb.core.MenuIcons;
+import com.crypticvortex.cb.core.Nation;
 import com.crypticvortex.cb.core.World;
 import net.miginfocom.swing.MigLayout;
 
@@ -10,13 +13,13 @@ import javax.swing.*;
  *
  * @author Jatboy
  */
-public class OverviewPanel extends JPanel {
+public class PanelOverview extends JPanel {
 
-    public OverviewPanel(World world) {
+    public PanelOverview(Nation nation, World world) {
         setLayout(new MigLayout());
 
         JLabel moneyIco = new JLabel(MenuIcons.MONEY.getIcon());
-        JLabel money = new JLabel("1000.00 (+0/d)");
+        JLabel money = new JLabel(GlobalVars.MONEY + " (+" + GlobalVars.MONEY_TICK + "/d)");
 
         add(moneyIco,"cell 0 0");
         add(money, "cell 1 0");

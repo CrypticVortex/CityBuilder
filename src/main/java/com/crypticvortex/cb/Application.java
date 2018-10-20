@@ -1,10 +1,11 @@
 package com.crypticvortex.cb;
 
 import com.crypticvortex.cb.core.CoreThread;
+import com.crypticvortex.cb.core.Nation;
 import com.crypticvortex.cb.core.World;
-import com.crypticvortex.cb.menus.ActionPanel;
-import com.crypticvortex.cb.menus.OverviewPanel;
-import com.crypticvortex.cb.menus.WorldViewPanel;
+import com.crypticvortex.cb.menus.PanelActions;
+import com.crypticvortex.cb.menus.PanelOverview;
+import com.crypticvortex.cb.menus.PanelWorldView;
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;
@@ -17,9 +18,10 @@ import javax.swing.border.Border;
  */
 public class Application extends JFrame {
     private World world;
-    private ActionPanel actions;
-    private OverviewPanel overview;
-    private WorldViewPanel worldView;
+    private Nation nation;
+    private PanelActions actions;
+    private PanelOverview overview;
+    private PanelWorldView worldView;
     private Border empty = BorderFactory.createEmptyBorder();
 
     public Application() {
@@ -31,9 +33,9 @@ public class Application extends JFrame {
         setLayout(new MigLayout());
 
         world = new World(9, 12);
-        actions = new ActionPanel(world);
-        overview = new OverviewPanel(world);
-        worldView = new WorldViewPanel(world);
+        actions = new PanelActions(nation, world);
+        overview = new PanelOverview(nation, world);
+        worldView = new PanelWorldView(nation, world);
 
         JScrollPane actionsPane = new JScrollPane(actions);
         actionsPane.setBorder(empty);

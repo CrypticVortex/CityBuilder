@@ -1,4 +1,4 @@
-package com.crypticvortex.cb.menus;
+package com.crypticvortex.cb.core;
 
 import com.crypticvortex.cb.Application;
 

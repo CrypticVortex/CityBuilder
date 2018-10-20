@@ -1,5 +1,6 @@
 package com.crypticvortex.cb.menus;
 
+import com.crypticvortex.cb.core.Nation;
 import com.crypticvortex.cb.core.World;
 import net.miginfocom.swing.MigLayout;
 
@@ -11,10 +12,10 @@ import java.awt.*;
  *
  * @author Jatboy
  */
-public class WorldViewPanel extends JPanel {
+public class PanelWorldView extends JPanel {
     private JButton[] grid;
 
-    public WorldViewPanel(World world) {
+    public PanelWorldView(Nation nation, World world) {
         setLayout(new MigLayout());
 
         grid = new JButton[world.getChunks().length];
@@ -22,6 +23,10 @@ public class WorldViewPanel extends JPanel {
             for(int x = 0; x < world.getHeight(); x++) {
                 int index = world.getWidth() * y + x;
                 JButton button = new JButton("(" + (x + 1) + "," + (y + 1) + ")");
+                button.addActionListener(e -> {
+                    JFrame frame = new JFrame("Chunk Overview");
+                    frame.setContentPane(new PanelChunkOverview(nation, world.getChunk(index)));
+                });
                 switch(world.getChunk(index).getData()) {
                     case 0: // GRASS
                         button.setBackground(Color.green);
